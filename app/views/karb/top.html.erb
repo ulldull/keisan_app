@@ -1,0 +1,31 @@
+<div class="bmi-main">
+  <div class="bmi-message">
+    <h2>目標心拍数　計算機</h2>
+    <p>
+      運動時の目標心拍数を計算します。
+    </p>
+    <p>
+      ※有酸素運動時に目標にして欲しい心拍数です。
+    </p>
+  </div>
+  <ul>
+    <%= form_tag("/karb/new")do %>
+    <li>
+    年齢：<input name="old" value = "<%= @old %>">歳
+    </li>
+    <li>
+    安静時脈拍：<input name="rest" value = "<%= @rest %>">回／分
+    </li>
+    <li>
+    運動強度：<%= select :huka,:num,[["40%（楽な運動）","40"],["50%（やや楽）","50"],["60%（ややきつい）","60"],["70%（きつい運動）","70"]] %>
+    </li>
+    <p>※若年者は70%、高齢者は50%程度推奨</p>
+    <li class="sousin">
+      <input type="submit" value="計算">
+    </li>
+    <% end %>
+    <li>
+      目標心拍数：<%= @active_palse %>
+    </li>
+  </ul>
+</div>

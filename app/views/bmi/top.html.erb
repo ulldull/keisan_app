@@ -1,0 +1,37 @@
+<div class="bmi-main">
+  <div class="bmi-message">
+    <h2>BMI　計算機</h2>
+    <p>
+      適正体重を計算します。
+    </p>
+  </div>
+  <ul>
+    <%= form_tag("/bmi/new")do %>
+    <li>
+    <label for="name">身長：</label>
+    <input name="sintyo" value = "<%= @sintyo %>">cm
+    </li>
+    <li>
+    <label for="name">体重：</label>
+    <input name="taiju" value = "<%= @taiju %>">kg
+    </li>
+    <li class="sousin">
+      <input type="submit" value="計算">
+    </li>
+    <% end %>
+    <li>
+      BMI：<%= @bmi %>
+    </li>
+    <li>
+      適正体重：<%= @risou %>
+    </li>
+    <li>
+      <%= @comment %>
+    </li>
+    <li>
+      <%= if @mitinori
+      "適正体重まで" + @mitinori.to_s + "kg"
+      end %>
+    </li>
+  </ul>
+</div>
