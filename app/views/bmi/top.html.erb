@@ -30,8 +30,28 @@
     </li>
     <li>
       <%= if @mitinori
-      "適正体重まで" + @mitinori.to_s + "kg"
+        if @mitinori <= 0
+          "適正体重まで" + @mitinori.to_s + "kg"
+        else
+          "適正より" + @mitinori.to_s + "kg痩せています。"
+        end
       end %>
+    </li>
+    <li>
+      <p>結果をツイートする</p>
+        <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+       class="twitter-share-button" data-text="あなたは<%= if @comment
+       @comment
+    end%>。<%= if@mitinori
+    if @mitinori <= 0
+         "適正体重まで、あと" + @mitinori.to_s + "kgです。"
+       else
+         @mitinori.to_s + "kg痩せています。"
+       end
+    end%>"
+       data-show-count="false">Tweet</a>
+       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8">
+       </script>
     </li>
   </ul>
 </div>
