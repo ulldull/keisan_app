@@ -40,7 +40,8 @@
     <li>
       <p>結果をツイートする</p>
         <a href="https://twitter.com/share?ref_src=twsrc%5Etfw"
-       class="twitter-share-button" data-text="あなたは<%= if @comment
+       class="twitter-share-button" data-url="https://keisanapp0429.herokuapp.com/bmi"
+       data-text="あなたは<%= if @comment
        @comment
     end%>。<%= if@mitinori
     if @mitinori <= 0
