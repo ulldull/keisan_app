@@ -1,10 +1,7 @@
-// Place all the styles related to the home controller here.
+// Place all the styles related to the taisha controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-/* reset ================================ */
-
-/* top ================================ */
-.bmi-main {
+.taisha-main {
   padding: 200px 0 100px;
   text-align: center;
   position: absolute;
@@ -19,33 +16,39 @@
   background-size: cover;
 }
 
-.bmi-message {
+.taisha-message {
   position: relative;
 }
 
-.bmi-main h2 {
+.taisha-main h2 {
   font-size: 50px;
   font-weight: 500;
   line-height: 1.3;
   -webkit-font-smoothing: antialiased;
   margin-bottom: 20px;
-  text-shadow: 3px 3px 3px #000;
+  text-shadow: 3px 3px 3px #ddd;
 }
 
-.bmi-main p {
+.taisha-main p {
   font-size: 20px;
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 2px 2px 2px #ddd;
 }
 
 
-.bmi-main li{
+.taisha-main li{
   padding: 3px;
 }
 
-.bmi-main input {
+.old{
+  width: 60px;
+  height: 40px
+}
+.taisha-main input {
+  background-color: #f5ffff;
+}
+.box{
   width: 100px;
   height: 40px;
-  background-color: #f5ffff;
 }
 
 .sousin{
@@ -69,4 +72,23 @@
   transform: translateY(4px);
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
   border-bottom: none;
+}
+
+
+.bar{
+  width: auto;
+  height: auto;
+  padding: 100px 100px;
+}
+.bar input{
+  width: 20px;
+  height: 15px;
+  position: relative;
+  margin-left: 15px;
+}
+.bar label{
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin-left: 0px;
 }

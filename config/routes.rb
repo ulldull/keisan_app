@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root "home#top"
-  
+
+  get "taisha" => "taisha#top"
+  post "taisha/new" => "taisha#new"
+
   get 'karb' => "karb#top"
   post "karb/new" => "karb#new"
 
