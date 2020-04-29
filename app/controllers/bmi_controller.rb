@@ -7,17 +7,17 @@ class BmiController < ApplicationController
     @bmi = (@taiju.to_f * 10000 / (@sintyo.to_f ** 2)).round(1)
     @risou = (((@sintyo.to_f / 100) ** 2) * 22).round(1)
     if @bmi < 18.5
-      @comment = "適正より痩せています"
+      @comment = "モデル並です"
     elsif @bmi < 25
-      @comment = "普通の体重です"
+      @comment = "普通の体重ですから"
     elsif @bmi < 30
-      @comment ="ちょっと太っています"
+      @comment ="ぷにぷにしています"
     elsif @bmi < 35
-      @comment = "太っています"
+      @comment = "ぽちゃっています"
     elsif @bmi < 40
-      @comment = "だいぶ太っています"
+      @comment = "食事が美味しいです"
     else
-      @comment = "かなり重いですね"
+      @comment = "例外的です"
     end
     @mitinori = (@risou - @taiju).round(1)
     render("bmi/top")
