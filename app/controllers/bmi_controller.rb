@@ -9,11 +9,12 @@ class BmiController < ApplicationController
     if @bmi < 18.5
       @comment = "モデル並です"
     elsif @bmi < 25
-      @comment = "普通の体重ですから"
+      @comment = "普通の体重です"
     elsif @bmi < 30
-      @comment ="ぷにぷにしています"
+      @comment ="ちょっと太っています。
+      ポケモンで言うとミュウです。"
     elsif @bmi < 35
-      @comment = "ぽちゃっています"
+      @comment = "太っています"
     elsif @bmi < 40
       @comment = "食事が美味しいです"
     else
